@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ocean View Resort • Help</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="brand">
+      <div class="badge"></div>
+      <div>
+        <h1>Ocean View Resort</h1>
+        <p>Help & guidelines</p>
+      </div>
+    </div>
+    <div class="links">
+      <a class="btn" href="reservation.html">Add</a>
+      <a class="btn" href="view.html">View</a>
+      <a class="btn" href="bill.html">Bill</a>
+	  <a class="btn" href="report.html">Reports</a>
+	  <a class="btn" href="help.html">Help</a>
+	  <button id="logoutBtn" class="btn danger">Logout</button>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px;">
+    <h2>How to Use the System</h2>
+    <p class="small">
+      This page is for new staff members. Follow these steps to operate the reservation system safely.
+    </p>
+
+    <hr class="sep"/>
+
+    <h3 style="margin:0 0 8px;">1) Login</h3>
+    <p class="small">Open Login page, enter your username and password, and sign in.</p>
+
+    <h3 style="margin:0 0 8px;">2) Add Reservation</h3>
+    <p class="small">
+      Go to Add page, fill the guest details, select room type and dates, then create reservation.
+      Reservation number must be unique.
+    </p>
+
+    <h3 style="margin:0 0 8px;">3) View Reservation</h3>
+    <p class="small">Use View page and enter reservation number to check saved details.</p>
+
+    <h3 style="margin:0 0 8px;">4) Billing</h3>
+    <p class="small">
+      Use Billing page and enter reservation number. System calculates nights and total cost using room rates.
+      You can print the bill.
+    </p>
+
+    <h3 style="margin:0 0 8px;">5) Logout</h3>
+    <p class="small">Always logout after use to protect guest data.</p>
+
+    <hr class="sep"/>
+    <p class="small"><b>Note:</b> If pages redirect to login, your session expired or you are not logged in.</p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/api.js"></script>
+</body>
+</html>

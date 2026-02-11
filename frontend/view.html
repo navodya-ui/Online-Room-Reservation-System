@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ocean View Resort • View Reservation</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="brand">
+      <div class="badge"></div>
+      <div>
+        <h1>Ocean View Resort</h1>
+        <p>Reservation lookup</p>
+      </div>
+    </div>
+    <div class="links">
+      <a class="btn" href="reservation.html">Add</a>
+      <a class="btn" href="view.html">View</a>
+      <a class="btn" href="bill.html">Bill</a>
+	  <a class="btn" href="report.html">Reports</a>
+      <a class="btn" href="help.html">Help</a>
+      <button id="logoutBtn" class="btn danger">Logout</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Find Reservation</h2>
+      <p>Enter reservation number to view full details.</p>
+
+      <div class="row">
+        <div>
+          <label>Reservation No</label>
+          <input id="searchReservationNo" type="text" placeholder="R001" />
+        </div>
+        <div style="align-self:end;">
+          <button id="searchBtn" class="btn primary" type="button">Search</button>
+        </div>
+      </div>
+
+      <hr class="sep"/>
+      <div id="resultArea"></div>
+    </div>
+
+    <div class="card">
+      <h2>Note</h2>
+      <p class="small">If not found, check the reservation number or create a new one.</p>
+    </div>
+  </div>
+</div>
+
+<div id="toastInline" class="toast-inline"></div>
+
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/view.js"></script>
+</body>
+</html>

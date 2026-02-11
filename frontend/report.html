@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ocean View Resort • Reports</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="brand">
+      <div class="badge"></div>
+      <div>
+        <h1>Ocean View Resort</h1>
+        <p>Management Reports</p>
+      </div>
+    </div>
+    <div class="links">
+      <a class="btn" href="reservation.html">Add</a>
+      <a class="btn" href="view.html">View</a>
+      <a class="btn" href="bill.html">Bill</a>
+      <a class="btn" href="report.html">Reports</a>
+      <a class="btn" href="help.html">Help</a>
+      <button id="logoutBtn" class="btn danger">Logout</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Revenue Report</h2>
+      <p>Select a date range to calculate total revenue.</p>
+
+      <div class="row">
+        <div>
+          <label>From</label>
+          <input id="fromDate" type="date" />
+        </div>
+        <div>
+          <label>To</label>
+          <input id="toDate" type="date" />
+        </div>
+      </div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+        <button id="revenueBtn" class="btn primary" type="button">Get Revenue</button>
+        <button id="countBtn" class="btn" type="button">Reservation Count</button>
+      </div>
+
+      <hr class="sep"/>
+      <div id="reportOutput"></div>
+
+      <!-- ✅ Inline toast under report section -->
+      <div id="toastInline" class="toast-inline"></div>
+    </div>
+
+    <div class="card">
+      <h2>Room Type Popularity</h2>
+      <p>Shows how many reservations per room type.</p>
+
+      <button id="roomTypeBtn" class="btn primary" type="button">Load Room Type Report</button>
+
+      <hr class="sep"/>
+      <div id="roomTypeOutput"></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/report.js"></script>
+</body>
+</html>

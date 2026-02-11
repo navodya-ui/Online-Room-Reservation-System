@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ocean View Resort • Login</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="brand">
+      <div class="badge"></div>
+      <div>
+        <h1>Ocean View Resort</h1>
+        <p>Online Room Reservation System</p>
+      </div>
+    </div>
+    <div class="links">
+      <a class="btn" href="help.html">Help</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Login</h2>
+      <p>Use your staff account to access the reservation system.</p>
+
+      <form id="loginForm" class="form">
+        <div>
+          <label>Username</label>
+          <input id="username" type="text" placeholder="admin / staff1" autocomplete="username" />
+        </div>
+        <div>
+          <label>Password</label>
+          <input id="password" type="password" placeholder="admin123 / staff123" autocomplete="current-password" />
+        </div>
+
+        <button class="btn primary" type="submit">Sign In</button>
+
+        <!-- ✅ Inline toast under form -->
+        <div id="toastInline" class="toast-inline"></div>
+
+        <div class="small">Backend must be running on port 8080.</div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Quick Info</h2>
+      <p class="small">Login → Add reservation → View → Bill → Reports.</p>
+      <hr class="sep"/>
+      <p class="small">Backend URL: <b>http://localhost:8080</b></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

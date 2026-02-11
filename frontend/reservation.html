@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ocean View Resort • Add Reservation</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="brand">
+      <div class="badge"></div>
+      <div>
+        <h1>Ocean View Resort</h1>
+        <p id="userLabel">Logged in</p>
+      </div>
+    </div>
+    <div class="links">
+      <a class="btn" href="reservation.html">Add</a>
+      <a class="btn" href="view.html">View</a>
+      <a class="btn" href="bill.html">Bill</a>
+      <a class="btn" href="report.html">Reports</a>
+      <a class="btn" href="help.html">Help</a>
+      <button id="logoutBtn" class="btn danger">Logout</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Add New Reservation</h2>
+      <p>Fill the guest details and booking dates.</p>
+
+      <form id="reservationForm" class="form">
+        <div class="row">
+          <div>
+            <label>Reservation No</label>
+            <input id="reservationNo" type="text" placeholder="R001" required />
+          </div>
+          <div>
+            <label>Room Type</label>
+            <select id="roomType" required>
+              <option value="">Select room type</option>
+              <option>Single</option>
+              <option>Double</option>
+              <option>Deluxe</option>
+              <option>Suite</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Guest Name</label>
+            <input id="guestName" type="text" placeholder="Nimal Perera" required />
+          </div>
+          <div>
+            <label>Contact</label>
+            <input id="contact" type="text" placeholder="0771234567" required />
+          </div>
+        </div>
+
+        <div>
+          <label>Address</label>
+          <input id="address" type="text" placeholder="Galle, Sri Lanka" required />
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Check-in</label>
+            <input id="checkIn" type="date" required />
+          </div>
+          <div>
+            <label>Check-out</label>
+            <input id="checkOut" type="date" required />
+          </div>
+        </div>
+
+        <button class="btn primary" type="submit">Create Reservation</button>
+
+        <!-- ✅ Inline toast under form -->
+        <div id="toastInline" class="toast-inline"></div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Tips</h2>
+      <p class="small">
+        Use a unique reservation number (R001, R002...). Check-out must be after check-in.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/reservation.js"></script>
+</body>
+</html>

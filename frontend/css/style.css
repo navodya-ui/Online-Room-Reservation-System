@@ -1,0 +1,213 @@
+/* frontend/css/style.css */
+:root{
+  --bg:#0f0f14;
+  --panel:#171722;
+  --panel2:#1e1e2d;
+  --text:#f2f2f7;
+  --muted:#b9b9c6;
+  --line:#2a2a3a;
+  --accent:#ffb000;     /* warm amber */
+  --accent2:#a855f7;    /* purple */
+  --danger:#ff4d6d;
+  --ok:#ffb000;
+  --shadow: 0 12px 30px rgba(0,0,0,.45);
+  --radius:16px;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: radial-gradient(1000px 600px at 15% 10%, rgba(168,85,247,.18), transparent 60%),
+              radial-gradient(900px 500px at 85% 20%, rgba(255,176,0,.16), transparent 55%),
+              var(--bg);
+  color:var(--text);
+  min-height:100vh;
+}
+
+.container{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 26px 18px 46px;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding: 14px 16px;
+  background: rgba(23,23,34,.8);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.badge{
+  width:12px;height:12px;border-radius:50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 0 18px rgba(255,176,0,.25);
+}
+.brand h1{
+  font-size: 16px;
+  margin:0;
+  letter-spacing:.5px;
+}
+.brand p{
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.nav .links{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+a.btn, button.btn{
+  appearance:none;
+  border:1px solid var(--line);
+  background: linear-gradient(180deg, rgba(30,30,45,.9), rgba(23,23,34,.9));
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration:none;
+  cursor:pointer;
+  font-weight:600;
+  font-size: 13px;
+}
+a.btn:hover, button.btn:hover{
+  border-color: rgba(255,176,0,.45);
+}
+.btn.primary{
+  border-color: rgba(255,176,0,.55);
+  background: linear-gradient(180deg, rgba(255,176,0,.18), rgba(168,85,247,.14));
+}
+.btn.danger{
+  border-color: rgba(255,77,109,.5);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+@media (max-width: 860px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+.card{
+  background: rgba(23,23,34,.88);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.card h2{
+  margin:0 0 10px;
+  font-size: 18px;
+}
+.card p{
+  margin:0 0 14px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.form{
+  display:grid;
+  gap: 12px;
+}
+
+.row{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 680px){
+  .row{ grid-template-columns: 1fr; }
+}
+
+label{
+  display:block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+input, select, textarea{
+  width:100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(15,15,20,.75);
+  color: var(--text);
+  outline: none;
+}
+input:focus, select:focus, textarea:focus{
+  border-color: rgba(168,85,247,.55);
+  box-shadow: 0 0 0 3px rgba(168,85,247,.15);
+}
+
+.kpi{
+  display:grid;
+  gap:10px;
+}
+.kpi .item{
+  padding: 12px;
+  border:1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(30,30,45,.7);
+}
+.kpi .item b{ display:block; font-size: 12px; color: var(--muted); }
+.kpi .item span{ font-size: 16px; font-weight:700; }
+
+.table{
+  width:100%;
+  border-collapse: collapse;
+  overflow:hidden;
+  border-radius: 14px;
+  border:1px solid var(--line);
+}
+.table th, .table td{
+  padding: 10px 10px;
+  text-align:left;
+  border-bottom:1px solid var(--line);
+  font-size: 13px;
+}
+.table th{ color: var(--muted); font-weight:600; background: rgba(30,30,45,.55); }
+.table tr:last-child td{ border-bottom:none; }
+
+.small{
+  font-size: 12px;
+  color: var(--muted);
+}
+hr.sep{
+  border:none;
+  border-top:1px solid var(--line);
+  margin: 14px 0;
+}
+
+/* ✅ New inline toast (under form) */
+.toast-inline{
+  display:none;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border:1px solid var(--line);
+  background: rgba(30,30,45,.55);
+  font-size: 13px;
+  line-height: 1.4;
+}
+.toast-inline.error{
+  border-color: rgba(255,77,109,.55);
+}
+.toast-inline.ok{
+  border-color: rgba(255,176,0,.55);
+}
